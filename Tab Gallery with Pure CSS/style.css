@@ -1,7 +1,8 @@
 body {
 	background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 	background-repeat: no-repeat;
-	font: 400 16px/1.5em "Open Sans", sans-serif;
+    font: 400 16px/1.5em "arial", sans-serif;
+    height: 100vh;
 }
 
 .tabbed {
