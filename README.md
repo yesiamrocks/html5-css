@@ -1,4 +1,4 @@
-## Assorted HTML5/CSS and UI Experiments from [Pavel](http://yesiam.rocks/at_a_glance_of_pavel.pdf).
+## Assorted HTML5/CSS and UI Experiments from [Pavel](http://yesiam.rocks/at_a_glance_of_pavel.pdf)
 
 Live demos:
 - [Tab Gallery with Pure CSS](https://codepen.io/yesiamrocks/full/jOEWQvQ)
