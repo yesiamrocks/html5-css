@@ -3,4 +3,4 @@
 Live demos:
 - [Tab Gallery with Pure CSS](https://codepen.io/yesiamrocks/full/jOEWQvQ)
 
-Copyright (C) 2019 Pavel, http://yesiam.rocks/
+Copyright © 2019 Pavel, http://yesiam.rocks/
