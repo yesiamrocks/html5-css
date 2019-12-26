@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Pavel" />
+    <link rel="shortcut icon" href="https://yesiam.rocks/pavel.jpg">
+    <title>Add and remove style by JS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="collapse_panel">
+        <img src="img/320x50.png" />
+      </div>
+
+      <div class="expand_panel">
+        <img src="img/320x480.jpg" />
+      </div>
+
+      <div class="close_btn">
+        <img src="img/cancel.png" />
+      </div>
+    </div>
+
+    <script>
+      var collapsePanel = document.querySelector(".collapse_panel ");
+      var expand_panel = document.querySelector(".expand_panel ");
+      var closeBtn = document.querySelector(".close_btn");
+
+      collapsePanel.addEventListener("click", myFunction);
+      closeBtn.addEventListener("click", exit);
+
+      function myFunction() {
+        expand_panel.style.transform = "translateY(0px)";
+        //closeBtn.setAttribute('class', closeBtn.getAttribute('class') + ' exit_in'); //Keep existing and add multiple CSS Class way 1
+        //closeBtn.setAttribute('class', 'close_btn exit_in'); //Add both (existing and new class)
+        closeBtn.className += " exit_in"; //Keep existing and add multiple CSS Class way 2
+        closeBtn.classList.remove("exit_out"); //Romove class
+        //closeBtn.classList.remove("exit_out", "close_btn"); //Romove multiple class
+      }
+
+      function exit() {
+        expand_panel.style.transform = "translateY(-480px)";
+        closeBtn.className += " exit_out";
+        closeBtn.classList.remove("exit_in");
+      }
+    </script>
+  </body>
+</html>
