@@ -3,5 +3,6 @@
 Live demos:
 - [Add Remove CSS Class by JS](https://codepen.io/yesiamrocks/full/mdywLPz)
 - [Add Remove Inline CSS by JS](https://codepen.io/yesiamrocks/full/GRgEdoY)
+- [Carousel Slider with Text Trail Effect](https://codepen.io/yesiamrocks/full/GRgEdoY)
 
 Copyright © 2019 Pavel, http://yesiam.rocks/
