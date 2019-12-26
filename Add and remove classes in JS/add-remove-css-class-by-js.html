@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -8,45 +9,45 @@
     <link rel="shortcut icon" href="https://yesiam.rocks/pavel.jpg">
     <title>Add and remove style by JS</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <div class="collapse_panel">
-        <img src="img/320x50.png" />
-      </div>
+        <div class="collapse_panel">
+            <img src="img/320x50.png" />
+        </div>
 
-      <div class="expand_panel">
-        <img src="img/320x480.jpg" />
-      </div>
+        <div class="expand_panel">
+            <img src="img/320x480.jpg" />
+        </div>
 
-      <div class="close_btn">
-        <img src="img/cancel.png" />
-      </div>
+        <div class="close_btn">
+            <img src="img/cancel.png" />
+        </div>
     </div>
+</body>
+<script>
+    var collapsePanel = document.querySelector(".collapse_panel "),
+        expand_panel = document.querySelector(".expand_panel "),
+        closeBtn = document.querySelector(".close_btn"),
+        animationDelay = 1000;
 
-    <script>
-      var collapsePanel = document.querySelector(".collapse_panel ");
-      var expand_panel = document.querySelector(".expand_panel ");
-      var closeBtn = document.querySelector(".close_btn");
+    collapsePanel.addEventListener("click", collapseAnimation);
+    closeBtn.addEventListener("click", exit);
 
-      collapsePanel.addEventListener("click", myFunction);
-      closeBtn.addEventListener("click", exit);
-
-      function myFunction() {
+    function collapseAnimation() {
         expand_panel.style.transform = "translateY(0px)";
-        //closeBtn.setAttribute('class', closeBtn.getAttribute('class') + ' exit_in'); //Keep existing and add multiple CSS Class way 1
-        //closeBtn.setAttribute('class', 'close_btn exit_in'); //Add both (existing and new class)
-        closeBtn.className += " exit_in"; //Keep existing and add multiple CSS Class way 2
-        closeBtn.classList.remove("exit_out"); //Romove class
-        //closeBtn.classList.remove("exit_out", "close_btn"); //Romove multiple class
-      }
+        closeBtn.style.transform = "translateX(0px)";
+        closeBtn.style.opacity = "1";
+    }
 
-      function exit() {
+    function exit() {
         expand_panel.style.transform = "translateY(-480px)";
-        closeBtn.className += " exit_out";
-        closeBtn.classList.remove("exit_in");
-      }
-    </script>
-  </body>
+        closeBtn.style.opacity = "0";
+        setTimeout(function () {
+            closeBtn.style.transform = "translateX(-50px)";
+        }, animationDelay);
+    }
+</script>
+
 </html>
